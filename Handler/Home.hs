@@ -1,6 +1,7 @@
 module Handler.Home where
 
 import Import
+import Settings.StaticFiles
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3,
                               withSmallInput)
 
@@ -19,6 +20,9 @@ getHomeR = do
     defaultLayout $ do
         aDomId <- newIdent
         setTitle "Welcome To Yesod!"
+        addScriptRemote "http://d3js.org/d3.v3.min.js"
+        addScriptRemote "http://d3js.org/topojson.v1.min.js"
+        addScriptRemote "http://maps.intrinsicimpact.org/js/california.js"
         $(widgetFile "homepage")
 
 postHomeR :: Handler Html

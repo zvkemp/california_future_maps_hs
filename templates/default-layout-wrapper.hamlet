@@ -22,12 +22,16 @@ $newline never
 
     <script>
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+
   <body>
-    <div class="container">
-      <header>
+    <div id="wrapper" class="container">
+      <header id="header">
+        <h2>Bay Area Demographic Trends
       <div id="main" role="main">
         ^{pageBody pc}
       <footer>
+        <p>
+          <small .muted>Data from the California Department of Finance and the US Census Bureau.
         #{appCopyright $ appSettings master}
 
     $maybe analytics <- appAnalytics $ appSettings master
