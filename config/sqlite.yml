@@ -1,0 +1,20 @@
+Default: &defaults
+  database: CaliforniaFutureMaps.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: CaliforniaFutureMaps_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: CaliforniaFutureMaps_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: CaliforniaFutureMaps_production.sqlite3
+  poolsize: 100
+  <<: *defaults
