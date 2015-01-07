@@ -138,7 +138,7 @@
       tr.selectAll('td.description').data(modes).enter().append('td').attr('class', 'description').text(function(d) {
         return d.description;
       });
-      d3.json('data/cali.json', function(error, counties) {
+      d3.json('/static/data/cali.json', function(error, counties) {
         _this.appendCounties(counties);
         _this.appendOutline(counties);
         _this.appendHoverLayer(counties);

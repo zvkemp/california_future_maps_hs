@@ -22,8 +22,9 @@ getHomeR = do
         setTitle "Welcome To Yesod!"
         addScriptRemote "http://d3js.org/d3.v3.min.js"
         addScriptRemote "http://d3js.org/topojson.v1.min.js"
-        addScriptRemote "http://maps.intrinsicimpact.org/js/california.js"
+        addScriptRemote "/static/js/california.js"
         $(widgetFile "homepage")
+
 
 postHomeR :: Handler Html
 postHomeR = do
